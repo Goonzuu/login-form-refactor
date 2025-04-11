@@ -1,8 +1,9 @@
 import { useState } from "react";
-import "../styles/styles.css";
-import doLogin from "../api/user.service";
+import "./styles.css";
+import doLogin from "../../api/user.service";
+import CustomInput from "../../components/CustomInput/CustomInput";
 
-const LoginForm = () => {
+const LoginScreen = () => {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [errors, setErrors] = useState<{ username?: string; password?: string }>({});
@@ -54,26 +55,31 @@ const LoginForm = () => {
     return (
         <form className="login_form" onSubmit={handleSubmit}>
             {formError && (
-                <div className="form-error-message">
+                <p className="form-error-message" role="alert">
                     {formError}
-                </div>
+                </p>
             )}
-            <input
+            <CustomInput
                 type="text"
-                placeholder="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className={errors.username ? "error" : ""}
+                placeholder="Enter your username"
+                name="username"
+                label="Username"
+                error={Boolean(errors.username)}
+                errorMessage={errors.username}
             />
-            {errors.username && <span className="error-text">{errors.username}</span>}
-            <input
+
+            <CustomInput
                 type="password"
-                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className={errors.password ? "error" : ""}
+                placeholder="Enter your password"
+                name="password"
+                label="Password"
+                error={Boolean(errors.password)}
+                errorMessage={errors.password}
             />
-            {errors.password && <span className="error-text">{errors.password}</span>}
             <button type="submit" disabled={loading}>
                 {loading ? "Loading..." : "Login"}
             </button>
@@ -82,4 +88,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default LoginScreen;

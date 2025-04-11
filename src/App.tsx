@@ -1,8 +1,8 @@
-import "./styles/styles.css";
-import LoginForm from './components/LoginForm';
+import LoginScreen from "./screens/Login/LoginScreen";
+
 
 function App() {
-  return <LoginForm />
+  return <LoginScreen />
 };
 
 export default App;
