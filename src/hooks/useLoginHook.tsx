@@ -7,6 +7,8 @@ export const useLoginForm = () => {
     const [errors, setErrors] = useState<{ username?: string; password?: string }>({});
     const [loading, setLoading] = useState(false);
     const [formError, setFormError] = useState<string | null>(null);
+    const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
 
     const validateForm = (
         username: string,
@@ -34,8 +36,10 @@ export const useLoginForm = () => {
                 setFormError(null);
                 const response = await doLogin(username, password);
                 onSuccess(response);
+                setSuccessMessage("Successfully logged!"); 
             } catch (error: any) {
                 setFormError(error.message || "An unexpected error occurred");
+                setSuccessMessage(null);
             } finally {
                 setLoading(false);
             }
@@ -51,5 +55,7 @@ export const useLoginForm = () => {
         formError,
         loading,
         handleSubmit,
+        successMessage,
+        setSuccessMessage,
     };
 };

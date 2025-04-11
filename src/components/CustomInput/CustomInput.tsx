@@ -23,6 +23,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
   className = "",
   error = false,
   errorMessage = "",
+  disabled= false,
 }) => {
   return (
     <div className={`custom-input-wrapper ${className}`}>
@@ -35,6 +36,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         placeholder={placeholder}
         name={name}
         className={`input-field ${error ? "input-error" : ""}`}
+        disabled={disabled}
       />
       {error && errorMessage && (
         <span className="input-error-message">{errorMessage}</span>

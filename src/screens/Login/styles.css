@@ -5,6 +5,12 @@
   min-height: 100vh;
   background-color: #f4f6f8;
 }
+.login-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #1f2d3d;
+}
 
 .login_form {
   background-color: #ffffff;
@@ -42,9 +48,19 @@
 .form-error-message {
   background-color: #ffe6e6;
   color: #cc0000;
+  font-weight: bold;
   padding: 10px 12px;
   border-radius: 6px;
   margin-bottom: 16px;
-  font-size: 14px;
+  text-align: center;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: #e0fbe0;
+  padding: 10px;
+  border-radius: 6px;
   text-align: center;
 }
