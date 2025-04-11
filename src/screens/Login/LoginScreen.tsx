@@ -1,5 +1,5 @@
 import CustomInput from "../../components/CustomInput/CustomInput";
-import { useLoginForm } from "../../hooks/useLoginHook";
+import { useLoginForm } from "../../hooks/useLoginForm";
 import "./styles.css";
 
 const LoginScreen = () => {
