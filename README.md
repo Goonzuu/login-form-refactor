@@ -2,10 +2,17 @@
 
 Proyecto creado con el fin de trabajar sobre la logica del formulario Login.
 
+## Requisitos
+- node v23.10.0
+
 ## Tecnologías
 - React 18
 - TypeScript
 - React Testing Library + Jest
+
+## Estilos
+- CSS
+Se agregaron estilos básicos respetando colores similares a la empresa en cuestion.
 
 ## Caracteristicas
 - Formulario con validaciones de campos requeridos.

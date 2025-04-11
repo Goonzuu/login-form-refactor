@@ -1,43 +1,63 @@
 .login-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4f6f8;
-}
-.login-title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 24px;
-  color: #1f2d3d;
-}
-
-.login_form {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 400px;
+  max-width: 440px;
+  min-width: 320px;
+  min-height: 420px;
+  box-sizing: border-box;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-  
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.login-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.5rem;
+  color: #425884;
+}
+
 .login_form button {
-  padding: 12px;
-  background-color: #2d8cff;
+  background: linear-gradient(to right, #578af1, #134ac1);
   color: white;
-  font-weight: bold;
+  padding: 0.95rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
   cursor: pointer;
-  width: 100%;
-  margin-top: 12px;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(57, 120, 248, 0.25);
+}
+
+.login_form button:hover {
+  background-color: #3068d4;
 }
   
 .login_form button:hover:enabled {
-  background-color: #1a6ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(57, 120, 248, 0.35);
 }
 
 .login_form button:disabled {
@@ -63,4 +83,20 @@
   padding: 10px;
   border-radius: 6px;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .login-title {
+    font-size: 1.4rem;
+  }
+
+  .login_form button {
+    font-size: 0.95rem;
+    padding: 0.85rem;
+  }
 }
