@@ -7,7 +7,7 @@ Proyecto creado con el fin de trabajar sobre la logica del formulario Login.
 - TypeScript
 - React Testing Library + Jest
 
-## Características
+## Caracteristicas
 - Formulario con validaciones de campos requeridos.
 - Tipado completo con TypeScript.
 - Tests unitarios y de integración.
@@ -16,12 +16,14 @@ Proyecto creado con el fin de trabajar sobre la logica del formulario Login.
 ```bash
 npm install
 npm start
-
+```
 ## Tests
-
+Los tests implementados buscan garantizar el correcto funcionamiento del sistema en dos niveles complementarios: logica y experiencia del usuario. Testear tanto el hook personalizado (useLoginForm) como el componente LoginScreen es clave para asegurarme de cubrir la lógica, los flujos de error/success, y cómo se refleja esto en la interfaz..
+```bash
 npm test
+```
 
-## Código original sin refactor
+## Codigo original sin refactor
 
 ```jsx
 import { useCallback, useEffect, useState } from "react";
@@ -69,3 +71,12 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+```
+
+## Funcion de agrupamiento por mes/año
+Para el ejericio se creó una funcion que se encuentra en la ubicacion `src/utils/groupExerciseFunction.ts`
+
+## Ejecucion en consola:
+
+```bash
+ npm run group-test
