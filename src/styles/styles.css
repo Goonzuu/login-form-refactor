@@ -35,4 +35,13 @@
     margin-top: 4px;
   }
   
+  .form-error-message {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-align: center;
+  }
   
